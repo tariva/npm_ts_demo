@@ -5,11 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev:watch": "nodemon",
-    "dev:build": "npm run pre-build && node dist/index.js",
+    "dev:build": "npm run typescript:transpile && npm run node:run",
     "typescript:transpile": "npx tsc",
-    "node:run": "node dist/index.js",
-    "pre-build": "rimraf ./dist && tsc"
+    "node:run": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +20,10 @@
   },
   "homepage": "https://github.com/tariva/npm_ts_demo#readme",
   "devDependencies": {
+    "@types/chalk-animation": "^1.6.1",
+    "@types/figlet": "^1.5.4",
+    "@types/gradient-string": "^1.1.2",
+    "@types/inquirer": "^8.2.0",
     "@types/node": "^17.0.13",
     "nodemon": "^2.0.15",
     "rimraf": "^3.0.2",
